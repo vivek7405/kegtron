@@ -1,0 +1,50 @@
+.footer {
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+  /* height: 56px; */
+  /* z-index: 50; */
+}
+
+.footer h1 {
+  float: left;
+  margin: 0;
+  padding: 0 15px;
+  font-size: 24px;
+  line-height: 56px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.footer nav {
+  font-size: 100%;
+}
+
+.footer nav a {
+  display: inline-block;
+  height: 56px;
+  line-height: 56px;
+  padding: 0 15px;
+  min-width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  flex: 1;
+  height: 3em;
+  text-decoration: none;
+  border-top: 3px solid transparent;
+  line-height: 1.4em;
+}
+
+.footer nav a:hover,
+.footer nav a:active {
+  color: #007bff;
+}
+
+.footer nav a.active {
+  border-top: 3px solid #007bff;
+  color: #007bff;
+}
