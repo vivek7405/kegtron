@@ -432,7 +432,7 @@ export default class Reports extends Component {
 
             if (grandTotalRows.length > 0) {
                 divs.splice(0, 0, <table border="0" style="text-align: center; width: 100%"><tr><td style="font-size: x-large"><b>Serving Report: {self.state.start} - {self.state.end}</b><br /><br /></td></tr></table>);
-                divs.splice(0, 0, <table border="0" style="text-align: center; width: 100%"><tr><td><br /><img src="/images/KegtronLogoBlack.png" height="24" /><br /></td></tr></table>);
+                divs.splice(0, 0, <table border="0" style="text-align: center; width: 100%"><tr><td><br /><img src="/assets/images/KegtronLogoBlack.png" height="24" /><br /></td></tr></table>);
 
                 let grandTotalTable = <table border="1" style="text-align: center; width: 100%">
                     <tr>
@@ -523,7 +523,7 @@ export default class Reports extends Component {
             }
 
             if (grandTotalRows.length > 0) {
-                divs.push(<table border="0" style="text-align: center; width: 100%"><tr><td><br /><img src="/images/KegtronLogoBlack.png" height="24" /><br /></td></tr></table>);
+                divs.push(<table border="0" style="text-align: center; width: 100%"><tr><td><br /><img src="/assets/images/KegtronLogoBlack.png" height="24" /><br /></td></tr></table>);
                 divs.push(<table border="0" style="text-align: center; width: 100%"><tr><td style="font-size: x-large"><b>Serving Report: {self.state.start} - {self.state.end}</b><br /><br /></td></tr></table>);
 
                 let table = <table border="1" style="text-align: center; width: 100%">
