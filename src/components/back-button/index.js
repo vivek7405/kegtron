@@ -12,13 +12,13 @@ export default class BackButton extends Component {
         let self = this;
 
         let rndr;
-        
+
         if (self.props.app.state.backlink) {
             rndr = <a href={self.props.app.state.backlink}>
                 <span class="fa fa-arrow-left mr-2" />back
             </a>;
         } else {
-            rndr = <img src="/images/KegtronLogoBlack.png" height="24" />;
+            rndr = <img src="/assets/images/KegtronLogoBlack.png" height="24" />;
         }
 
         return (

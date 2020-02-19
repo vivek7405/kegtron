@@ -144,7 +144,7 @@ export default class Login extends Component {
         return (
             <div class={style.login} style="width:100%; height: 100%; background-color: #000">
                 <div class="mx-auto bg-light rounded" style="max-width: 480px">
-                    <img src="images/Kegtron Cloud Dashboard - bw.png" class="img-fluid" />
+                    <img src="assets/images/Kegtron Cloud Dashboard - bw.png" class="img-fluid" />
 
                     <div class="form p-3 rounded w-100">
                         <input type="email"
