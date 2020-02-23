@@ -8,6 +8,7 @@
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
     "build": "preact build",
+    "prod": "preact build && cp _redirects build/_redirects",
     "serve": "preact build && serve build --single",
     "dev": "preact watch",
     "lint": "eslint src",
