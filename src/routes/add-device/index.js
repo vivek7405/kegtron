@@ -35,28 +35,31 @@ export default class AddDevice extends Component {
 
         return new Promise(function (resolve, reject) {
             let attempts = 0;
-            let error = function (err) {
-                if (!self.unmounted) setTimeout(f, 500);
-            };
-            let success = function (res) {
-                let key = res.data.result;
-                if (key) {
-                    self.setState({
-                        step: 1,
-                        public_key: key
-                    });
-                    resolve();
-                } else {
-                    reject(res.data.error);
-                }
-            };
+            let f = function () {
+                let error = function (err) {
+                    if (!self.unmounted) setTimeout(f, 500);
+                };
+                let success = function (res) {
+                    let key = res.data.result;
+                    if (key) {
+                        self.setState({
+                            step: 1,
+                            public_key: key
+                        });
+                        resolve();
+                    } else {
+                        reject(res.data.error);
+                    }
+                };
 
-            axios({
-                url: Configuration.provisionURL + "/GetKey",
-                timeout: Configuration.callTimeoutMilli
-            }).then(success, error);
-            attempts++;
-            console.log("attempt", attempts);
+                axios({
+                    url: Configuration.provisionURL + "/GetKey",
+                    timeout: Configuration.callTimeoutMilli
+                }).then(success, error);
+                attempts++;
+                console.log("attempt", attempts);
+            };
+            f();
         });
     }
 
