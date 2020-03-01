@@ -3,6 +3,7 @@ import { Router } from 'preact-router';
 import Header from './header';
 import Content from './content';
 import Footer from './footer';
+import MetaTags from 'react-meta-tags';
 
 export default class App extends Component {
 	constructor(props) {
@@ -40,8 +41,8 @@ export default class App extends Component {
 		}
 
 		return (
-			<div id="app">
-				<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+			<div id="app" >
+				<MetaTags><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /></MetaTags>
 				{header}
 				<Content app={this} />
 				{footer}
