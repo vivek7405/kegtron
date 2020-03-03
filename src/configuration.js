@@ -1,5 +1,6 @@
 const Configuration = {
     baseURL: "http://localhost:8080/",
+    apiUrl: "http://localhost:8080/api",
     provisionURL: "http://192.168.4.1",
     mdashURL: "https://mdash.net",
     appID: "", // <-- Set this to YOUR_APP_ID

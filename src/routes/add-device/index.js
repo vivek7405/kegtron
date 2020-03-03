@@ -53,7 +53,7 @@ export default class AddDevice extends Component {
                 };
 
                 axios({
-                    url: Configuration.provisionURL + "/GetKey",
+                    url: Configuration.apiUrl + "/GetKey",
                     timeout: Configuration.callTimeoutMilli
                 }).then(success, error);
                 attempts++;
@@ -84,7 +84,7 @@ export default class AddDevice extends Component {
         });
         return axios({
             method: "POST",
-            url: Configuration.provisionURL + "/setup",
+            url: Configuration.apiUrl + "/setup",
             timeout: Configuration.callTimeoutMilli,
             data: data
         }).then(function (res) {
