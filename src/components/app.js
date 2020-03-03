@@ -41,7 +41,6 @@ export default class App extends Component {
 
 		return (
 			<div id="app">
-				<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 				{header}
 				<Content app={this} />
 				{footer}
