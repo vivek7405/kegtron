@@ -41,8 +41,7 @@
     "preact": "^10.0.1",
     "preact-render-to-string": "^5.1.0",
     "preact-router": "^3.0.0",
-    "preact-sidenav": "^0.3.2",
-    "react-meta-tags": "^0.7.4"
+    "preact-sidenav": "^0.3.2"
   },
   "jest": {
     "preset": "jest-preset-preact",
