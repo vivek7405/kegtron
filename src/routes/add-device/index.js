@@ -53,7 +53,7 @@ export default class AddDevice extends Component {
                 };
 
                 axios({
-                    url: Configuration.apiUrl + "/GetKey",
+                    url: Configuration.provisionURL + "/GetKey",
                     timeout: Configuration.callTimeoutMilli
                 }).then(success, error);
                 attempts++;
@@ -84,7 +84,7 @@ export default class AddDevice extends Component {
         });
         return axios({
             method: "POST",
-            url: Configuration.apiUrl + "/setup",
+            url: Configuration.provisionURL + "/setup",
             timeout: Configuration.callTimeoutMilli,
             data: data
         }).then(function (res) {
@@ -129,6 +129,14 @@ export default class AddDevice extends Component {
             });
     }
 
+    backToStep0 = () => {
+        this.setState({ step: 0 });
+    }
+
+    backToStep1 = () => {
+        this.setState({ step: 1 });
+    }
+
     render() {
         let self = this;
 
@@ -151,7 +159,7 @@ export default class AddDevice extends Component {
             </div>;
         } else if (self.state.step === 1) {
             div = <div>
-                <a href={location.href} class="link text-decoration-none" onClick={self.setState({ step: 0 })}>
+                <a href={location.href} class="link text-decoration-none" onClick={self.backToStep0}>
                     <span class="fa fa-arrow-left"></span>
                     back
                 </a>
@@ -172,7 +180,7 @@ export default class AddDevice extends Component {
             </div>;
         } else if (self.state.step === 2) {
             div = <div>
-                <a href={location.href} class="link text-decoration-none" onClick={self.setState({ step: 1 })}>
+                <a href={location.href} class="link text-decoration-none" onClick={self.backToStep1}>
                     <span class="fa fa-arrow-left"></span>
                     back
                 </a>

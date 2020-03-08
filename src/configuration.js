@@ -1,6 +1,5 @@
 const Configuration = {
     baseURL: "http://localhost:8080/",
-    apiUrl: "https://laughing-carson-296cd4.netlify.com/api",
     provisionURL: "http://192.168.4.1",
     mdashURL: "https://mdash.net",
     appID: "", // <-- Set this to YOUR_APP_ID
