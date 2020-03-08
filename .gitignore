@@ -11,6 +11,5 @@
 #     https://www.atlassian.com/git/tutorials/git-lfs
 
 node_modules
-/build
 /*.log
 *.lock
