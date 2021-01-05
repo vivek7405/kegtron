@@ -34,7 +34,7 @@
     "serve": "^11.1.0"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
     "moment": "^2.24.0",
